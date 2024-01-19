@@ -1,0 +1,4 @@
+name = "LazySortedArray"
+uuid = "46fdb2c0-5266-4f31-aeb2-8663b175b580"
+authors = ["Sato Cvik <sato@bankcrash.gg>"]
+version = "0.1.0"
