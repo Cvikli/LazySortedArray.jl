@@ -4,7 +4,7 @@ LazySortedArray for manage big sorted datasets with 100x speed. Optimizing on in
 
 ## Features
 
-- **Lazy Sorting**: Delays sorting until necessary, reducing sorting overhead by around 10_000x.
+- **Lazy Sorting**: Delays sorting until necessary, reducing sorting overhead by around 10_000x (but increasing that one time operation time a little bit).
 - **Threshold Management**: Excludes elements below a certain threshold, to optimize the speed even further.
 - **Optimized Merging**: Efficiently merges unsorted lazy data into the sorted array.
 - **Standardization**: tries to follow the standardized [DataStructures.jl](https://juliacollections.github.io/DataStructures.jl/latest/)
@@ -23,26 +23,18 @@ using LazySortedArray
 You can create a `LazySortedArray` instance in several ways:
 
 ```julia
-# Specifying the type
-lsa = LazySortedArray(Float64)
-
-# With specified main and sub-array sizes
-lsa = LazySortedArray(Float64, 1000000, 10000)
+lsa = LazySortedArray(Float64)                  # Specifying the type
+lsa = LazySortedArray(Float64, 1000000, 10000)  # With specified main and sub-array sizes
 ```
 
 ### Basic Operations
 
 ```julia
-# Insert an element
-push!(lsa, 10)
+push!(lsa, 10)     
 
-# Access an element (triggers sorting if necessary)
-element = lsa[1]
+element = lsa[1]   # Access an element (triggers sorting if necessary)
+ensure_sorted(lsa) # unnecessary function as it will be always sorted when used!
 
-# Sort and merge the data
-evaluate(lsa)
-
-# Display array information
 println(lsa)
 ```
 
