@@ -18,18 +18,14 @@ using LazySortedArray
 
 ## Usage
 
-### Creating a LazySortedArray
+### Basic Operations
 
 You can create a `LazySortedArray` instance in several ways:
 
 ```julia
 lsa = LazySortedArray(Float64)                  # Specifying the type
 lsa = LazySortedArray(Float64, 1000000, 10000)  # With specified main and sub-array sizes
-```
 
-### Basic Operations
-
-```julia
 push!(lsa, 10)     
 
 element = lsa[1]   # Access an element (triggers sorting if necessary)
@@ -37,6 +33,9 @@ ensure_sorted(lsa) # unnecessary function as it will be always sorted when used!
 
 println(lsa)
 ```
+
+## Very simple package 
+- [LazySortedArray.jl](https://github.com/Cvikli/LazySortedArrays.jl/blob/main/src/LazySortedArray.jl) is a ONE file pkg.
 
 ## License
 
