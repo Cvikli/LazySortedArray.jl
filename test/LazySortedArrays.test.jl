@@ -1,8 +1,6 @@
 
 lsa=LazySortedArray(Float32)
 
-
-using RelevanceStacktrace
 push!(lsa, 10)
 push!(lsa, 7)
 push!(lsa, 7)
