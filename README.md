@@ -1,6 +1,6 @@
 # LazySortedArray.jl
 
-LazySortedArray for manage big sorted datasets with 100x speed. Optimizing on insertion and occasional read.
+LazySortedArrayStruct for manage big sorted datasets with 2x speed. Optimizing on insertion and occasional read.
 
 ## Features
 
@@ -20,11 +20,11 @@ using LazySortedArray
 
 ### Basic Operations
 
-You can create a `LazySortedArray` instance in several ways:
+You can create a `LazySortedArrayStruct` instance in several ways:
 
 ```julia
-lsa = LazySortedArray(Float64)                  # Specifying the type
-lsa = LazySortedArray(Float64, 1000000, 10000)  # With specified main and sub-array sizes
+lsa = LazySortedArrayStruct(Float64)                  # Specifying the type
+lsa = LazySortedArrayStruct(Float64, 1000000, 10000)  # With specified main and sub-array sizes
 
 push!(lsa, 10)     
 
